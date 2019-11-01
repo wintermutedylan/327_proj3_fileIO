@@ -43,7 +43,7 @@ int KP_FileIO::getFileContents(const std::string &filename, std::string &content
 int KP_FileIO::writeVectortoFile(const std::string filename,std::vector<std::string> &myEntryVector)
 {
 	fstream file;
-	file.open(filename.c_str());
+	file.open(filename, ios::out);
 	if (!file.is_open()){
 		return COULD_NOT_OPEN_FILE_TO_WRITE;
 	}
